@@ -1,14 +1,30 @@
 ﻿@page
 @model IndexModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Wunschzettel";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Wunschzettel erstellen: </h1>
-    <input class="form-control"/> 
-    <button>Erstellen</button>
-    <h1 class="display-4">Wunschzettel öffnen: </h1>
-    <input class="form-control" />
-    <button>Öffnen</button>
+<div class="site-content py-4">
+    <div class="card w-100 shadow-sm" style="max-width:720px;">
+        <div class="card-body">
+            <h2 class="h5 text-center mb-3">Wunschzettel erstellen</h2>
+
+            <form method="post" class="mb-3">
+                <div class="mb-2">
+                    <input asp-for="CreateInput" class="form-control" placeholder="Name des Wunschzettels" />
+                </div>
+                <button type="submit" asp-page-handler="Create" class="btn btn-primary w-100">Erstellen</button>
+            </form>
+
+            <hr />
+
+            <h2 class="h5 text-center mb-3">Wunschzettel öffnen</h2>
+            <form method="post">
+                <div class="mb-2">
+                    <input asp-for="OpenInput" class="form-control" placeholder="ID oder Name" />
+                </div>
+                <button type="submit" asp-page-handler="Open" class="btn btn-secondary w-100">Öffnen</button>
+            </form>
+        </div>
+    </div>
 </div>

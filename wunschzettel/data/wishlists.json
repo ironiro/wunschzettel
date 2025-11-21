@@ -1,0 +1,37 @@
+[
+  {
+    "Id": "3439",
+    "Title": "test",
+    "Gifts": [],
+    "CreatedAt": "2025-11-21T21:55:05.834688Z"
+  },
+  {
+    "Id": "7888",
+    "Title": "regina weihnachten 2025 ",
+    "Gifts": [
+      {
+        "Id": "c4401cccbedb4323a20573f5a5112797",
+        "Name": "geschenk 1 ",
+        "Note": "eine t\u00FCte eis ",
+        "Price": null,
+        "Link": "http://www.eis.de",
+        "CreatedAt": "2025-11-21T22:36:01.668443Z",
+        "IsBought": true,
+        "BoughtBy": "Daniel"
+      }
+    ],
+    "CreatedAt": "2025-11-21T21:55:24.99171Z"
+  },
+  {
+    "Id": "4760",
+    "Title": null,
+    "Gifts": [],
+    "CreatedAt": "2025-11-21T22:08:09.20246Z"
+  },
+  {
+    "Id": "3664",
+    "Title": "Regina Weihnachten 25 ",
+    "Gifts": [],
+    "CreatedAt": "2025-11-21T22:27:53.813461Z"
+  }
+]

@@ -2,6 +2,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+// Register wishlist store for creating/opening wishlists
+builder.Services.AddSingleton<wunschzettel.Services.WishlistStore>();
 
 var app = builder.Build();
 
