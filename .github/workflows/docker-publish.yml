@@ -26,7 +26,8 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v4
         with:
-          context: .
-          file: wunschzettel/wunschzettel/Dockerfile
+          # Use the project folder as build context so paths inside Dockerfile resolve correctly
+          context: ./wunschzettel
+          file: Dockerfile
           push: true
           tags: ghcr.io/${{ github.repository_owner }}/wunschzettel:latest
