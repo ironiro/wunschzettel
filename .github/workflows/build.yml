@@ -1,0 +1,31 @@
+name: .NET Build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '9.0.x'
+      - name: Restore
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore --configuration Release
+      - name: Publish artifact
+        run: |
+          dotnet publish wunschzettel/wunschzettel.csproj -c Release -o publish
+          tar -czf publish.tar.gz publish
+        env: {}
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: publish
+          path: publish.tar.gz
